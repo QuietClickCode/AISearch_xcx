@@ -1,2 +1,9 @@
 <!--pages/test/test.wxml-->
-<text>我是测试页面</text>
+<view class="body">
+	<view class="search">
+		<view>
+			<input class="input" />
+			<button class="button" bindtap="search">AISearch</button>
+		</view>
+	</view>
+</view>
