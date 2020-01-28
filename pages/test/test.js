@@ -17,6 +17,20 @@ Page({
       icon: 'success',
       duration: 2000
     })
+    wx.request({
+      url: 'https://www.myznsh.com/searchcsdn?wd=%E7%88%B1%E6%83%85',
+      method: "POST",
+      header: {
+        'content-type': 'application/json'
+      },
+      data: {
+        keyword: "你好"
+      },
+      success(res) {
+        console.log(res)
+      }
+      
+    })
   },
   /**
    * 生命周期函数--监听页面加载
