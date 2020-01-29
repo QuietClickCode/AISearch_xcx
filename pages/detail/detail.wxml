@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+<view>
+<view wx:for="{{responseData}}">
+{{index}}:{{item.content}}
+</view>
+</view>

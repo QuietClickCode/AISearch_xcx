@@ -27,7 +27,19 @@ Page({
         keyword: "你好"
       },
       success(res) {
-        console.log(res)
+        var _res = res;
+        wx.navigateTo({
+          url: '../detail/detail',
+          
+          success: function(res) {
+            // 通过eventChannel向被打开页面传送数据
+            
+            res.eventChannel.emit('acceptDataFromOpenerPage', _res.data.data.list)
+          }
+        })
+        // console.log(res)
+        // console.log(res.data.data.list[0].content);
+
       }
       
     })
