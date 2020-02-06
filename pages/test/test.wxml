@@ -2,7 +2,7 @@
 <view class="body">
 	<view class="search">
 		<view>
-			<input class="input" />
+			<input class="input" bindinput="bindKeyInput" />
 			<button class="button" bindtap="search">AISearch</button>
 		</view>
 	</view>

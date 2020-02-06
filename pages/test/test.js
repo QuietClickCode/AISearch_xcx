@@ -5,6 +5,13 @@ Page({
    */
   data: {
     test: "",
+    keyword: ""
+    
+  },
+  bindKeyInput: function(e) {
+  this.setData({
+    keyword: e.detail.value
+  })
   },
   show: function () {
     this.setData({
@@ -12,13 +19,16 @@ Page({
     })
   },
   search: function () {
+    
     wx.showToast({
       title: '成功',
       icon: 'success',
       duration: 2000
     })
+    var keyword = this.keyword;
+    console.log(this.keyword)
     wx.request({
-      url: 'https://www.myznsh.com/searchcsdn?wd=%E7%88%B1%E6%83%85',
+      url: 'https://www.myznsh.com/searchcsdn?wd=' + keyword,
       method: "POST",
       header: {
         'content-type': 'application/json'
